@@ -1,0 +1,121 @@
+.navbar-brand {
+    padding: 0px;
+}
+.navbar-brand > img {
+    height: 100%;
+    padding: 15px;
+    width: auto;
+}
+
+.temtem-entry {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 0 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.temtem-entry:nth-child(even) {
+    justify-content: flex-end;
+}
+
+.temtem-entry > img {
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.temtem-entry .temtem-info {
+    color: white;
+    background-color: #30322f;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.temtem-entry .temtem-info .temtem-type {
+    display: flex;
+    align-items: center;
+}
+
+.temtem-entry .temtem-info .temtem-type:before {
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: url('../data/placeholder.png') no-repeat;
+    background-size: cover;
+}
+
+.temtem-entry .temtem-info .temtem-type.crystal:before {
+    background: url('../data/types/crystal.png') no-repeat;
+    background-size: cover;
+}
+
+.temtem-entry .temtem-info .temtem-type.digital:before {
+    background: url('../data/types/digital.png') no-repeat;
+    background-size: cover;
+}
+
+.temtem-entry .temtem-info .temtem-type.earth:before {
+    background: url('../data/types/earth.png') no-repeat;
+    background-size: cover;
+}
+
+.temtem-entry .temtem-info .temtem-type.electric:before {
+    background: url('../data/types/electric.png') no-repeat;
+    background-size: cover;
+}
+
+.temtem-entry .temtem-info .temtem-type.fire:before {
+    background: url('../data/types/fire.png') no-repeat;
+    background-size: cover;
+}
+
+.temtem-entry .temtem-info .temtem-type.melee:before {
+    background: url('../data/types/melee.png') no-repeat;
+    background-size: cover;
+}
+
+.temtem-entry .temtem-info .temtem-type.mental:before {
+    background: url('../data/types/mental.png') no-repeat;
+    background-size: cover;
+}
+
+.temtem-entry .temtem-info .temtem-type.nature:before {
+    background: url('../data/types/nature.png') no-repeat;
+    background-size: cover;
+}
+
+.temtem-entry .temtem-info .temtem-type.neutral:before {
+    background: url('../data/types/neutral.png') no-repeat;
+    background-size: cover;
+}
+
+.temtem-entry .temtem-info .temtem-type.toxic:before {
+    background: url('../data/types/toxic.png') no-repeat;
+    background-size: cover;
+}
+
+.temtem-entry .temtem-info .temtem-type.water:before {
+    background: url('../data/types/water.png') no-repeat;
+    background-size: cover;
+}
+
+.temtem-entry .temtem-info .temtem-type.wind:before {
+    background: url('../data/types/wind.png') no-repeat;
+    background-size: cover;
+}
+
+.temtem-entry .temtem-info .temtem-types {
+    display: flex;
+    flex-direction: row;
+}
+
+.temtem-entry.active .temtem-select,
+.temtem-entry:not(.active) .temtem-name,
+.temtem-entry:not(.active) .temtem-types {
+    display: none;
+    opacity: 0;
+}

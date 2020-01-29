@@ -127,9 +127,9 @@ $(document).ready(function() {
 
     getTemtemJSON('https://raw.githubusercontent.com/Brackyt/TemtemFightHelper/master/data/temtem.json', function (all_temtem) {
         var modal_list = $('#temtem-modal .dialog ul');
-        modal_list.append('<li data-search-on-list="list-item" data-name="none"><span class="temtem-name">None</span></li>');
+        modal_list.append('<li class="big-clip" data-search-on-list="list-item" data-name="none"><span class="temtem-name">None</span></li>');
         all_temtem.forEach((temtem, i) => {
-            var li = $('<li data-search-on-list="list-item" data-name="' + temtem['name'] + '"></li>');
+            var li = $('<li class="big-clip" data-search-on-list="list-item" data-name="' + temtem['name'] + '"></li>');
 
             li.append('<div class="image-container"><img width="50px" height="50px" class="temtem-icon" src="' + temtem['image'] + '"></div>');
             li.append('<span class="temtem-name">' + temtem['name'] + '</span>');
@@ -192,7 +192,7 @@ $(document).ready(function() {
                     beatSecond = '<th>Best to beat <img width="30px" height="30px" src="' + image1 + '"> ' + scores[1][0] + '</th>';
                 }
 
-                var table = $('<table><thead><tr>' + beatFirst + beatSecond + '</tr></thead></table>');
+                var table = $('<table class="big-clip"><thead><tr>' + beatFirst + beatSecond + '</tr></thead></table>');
                 var tbody = $('<tbody></tbody>');
                 var nbOfTemtem = scores[0][1].length;
                 for (var i = 0; i < nbOfTemtem; i++) {

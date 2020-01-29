@@ -53,6 +53,17 @@ function getTemTypes(allTemtem, toCompare) {
     return retTypes;
 }
 
+function getTemImage(allTemtem, toCompare) {
+    var image = "";
+    allTemtem.forEach((item, i) => {
+        if (item['name'].toLowerCase() === toCompare.toLowerCase()) {
+            image = item['image'];
+            return false;
+        }
+    });
+    return image;
+}
+
 function sortByScore(a, b) {
     var aScore = a[0];
     var bScore = b[0];
@@ -158,14 +169,17 @@ $(document).ready(function() {
             });
 
             var scores = doCalculations(all_temtem, allYourTemtem, allEnemyTemtem);
-            console.log(scores);
             var div = $("#results");
-            var table = $('<table><thead><tr><th>Best to beat ' + scores[0][0] + '</th><th>Best to beat ' + scores[1][0] + '</th></tr></thead></table>');
+            var image = getTemImage(all_temtem, scores[0][0]);
+            var image1 = getTemImage(all_temtem, scores[1][0]);
+            var table = $('<table><thead><tr><th>Best to beat <img width="30px" height="30px" src="' + image + '"> ' + scores[0][0] + '</th><th>Best to beat <img width="30px" height="30px" src="' + image1 + '"> ' + scores[1][0] + '</th></tr></thead></table>');
             var tbody = $('<tbody></tbody>');
             var nbOfTemtem = scores[0][1].length;
             for (var i = 0; i < nbOfTemtem; i++) {
-                tbody.append('<tr><td>' + scores[0][1][i][1] + '(' + scores[0][1][i][2] + '): x' + scores[0][1][i][0] + '</td><td>' + scores[1][1][i][1] + '(' + scores[1][1][i][2] + '): x' + scores[1][1][i][0] + '</td></tr>');
+                var image = getTemImage(all_temtem, scores[0][1][i][1]);
+                tbody.append('<tr><td><img width="30px" height="30px" src="' + image + '"> ' + scores[0][1][i][1] + ' <img width="30px" height="30px" src="data/types/' + scores[0][1][i][2].toLowerCase() + '.png">: x' + scores[0][1][i][0] + '</td><td>' + scores[1][1][i][1] + ' <img width="30px" height="30px" src="data/types/' + scores[0][1][i][2].toLowerCase() + '.png">: x' + scores[1][1][i][0] + '</td></tr>');
             }
+            div.children().remove();
             table.append(tbody);
             div.append(table);
         });

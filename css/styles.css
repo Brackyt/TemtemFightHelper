@@ -200,6 +200,12 @@ h1 {
     display: flex;
     justify-content: space-between;
 	align-items: center;
+    transition: all 150ms ease-in-out;
+}
+
+#temtem-modal .dialog ul li:hover {
+    background: #4f504f;
+    color: white;
 }
 
 #temtem-modal .dialog ul li img {

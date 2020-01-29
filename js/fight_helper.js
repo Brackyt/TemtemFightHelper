@@ -127,6 +127,7 @@ $(document).ready(function() {
 
     getTemtemJSON('https://raw.githubusercontent.com/Brackyt/TemtemFightHelper/master/data/temtem.json', function (all_temtem) {
         var modal_list = $('#temtem-modal .dialog ul');
+        modal_list.append('<li data-name="none"><span class="temtem-name">None</span></li>');
         all_temtem.forEach((temtem, i) => {
             var li = $('<li data-name="' + temtem['name'] + '"></li>');
 
@@ -215,14 +216,21 @@ $(document).ready(function() {
                 var entry = $('#' + currentEditTemtem[0]).children().eq(currentEditTemtem[1]);
                 var info = entry.find(".temtem-info");
                 var name = $(this).data("name");
-                var types = $(this).find(".temtem-types").clone();
-                var img = $(this).find(".temtem-icon").clone();
-                entry.find("img").remove();
-                info.children().not(':first').remove();
-                entry.prepend(img);
-                info.append('<span class="temtem-name">' + name + '</span>');
-                info.append(types);
-                entry.addClass("active");
+
+                if (name !== 'none') {
+                    var types = $(this).find(".temtem-types").clone();
+                    var img = $(this).find(".temtem-icon").clone();
+                    entry.find("img").remove();
+                    info.children().not(':first').remove();
+                    entry.prepend(img);
+                    info.append('<span class="temtem-name">' + name + '</span>');
+                    info.append(types);
+                    entry.addClass("active");
+                } else {
+                    entry.removeClass("active");
+                    entry.find("img").attr("src", "data/placeholder.png");
+                    info.children().not(':first').remove();
+                }
 
                 currentEditTemtem = undefined;
             }

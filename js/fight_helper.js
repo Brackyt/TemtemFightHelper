@@ -123,6 +123,7 @@ $(document).ready(function() {
     var currentEditTemtem = undefined;
     var allYourTemtem = [];
     var allEnemyTemtem = [];
+    var modalOpened = false;
 
     getTemtemJSON('https://raw.githubusercontent.com/Brackyt/TemtemFightHelper/master/data/temtem.json', function (all_temtem) {
         var modal_list = $('#temtem-modal .dialog ul');
@@ -141,9 +142,16 @@ $(document).ready(function() {
             modal_list.append(li);
         });
 
+        $('#temtem-modal').click(function(event) {
+            if(event.target.id == "dialog" || $(event.target).closest('#dialog').length)
+                return;
+            $('#temtem-modal').toggleClass("active");
+        });
+
         $('.temtem-entry').click(function() {
             id = $(this).parent().attr('id');
             currentEditTemtem = [id, $(this).index()];
+            modalOpened = true;
             $('#temtem-modal').toggleClass("active");
         });
 
@@ -169,19 +177,36 @@ $(document).ready(function() {
             });
 
             var scores = doCalculations(all_temtem, allYourTemtem, allEnemyTemtem);
-            var div = $("#results");
-            var image = getTemImage(all_temtem, scores[0][0]);
-            var image1 = getTemImage(all_temtem, scores[1][0]);
-            var table = $('<table><thead><tr><th>Best to beat <img width="30px" height="30px" src="' + image + '"> ' + scores[0][0] + '</th><th>Best to beat <img width="30px" height="30px" src="' + image1 + '"> ' + scores[1][0] + '</th></tr></thead></table>');
-            var tbody = $('<tbody></tbody>');
-            var nbOfTemtem = scores[0][1].length;
-            for (var i = 0; i < nbOfTemtem; i++) {
-                var image = getTemImage(all_temtem, scores[0][1][i][1]);
-                tbody.append('<tr><td><img width="30px" height="30px" src="' + image + '"> ' + scores[0][1][i][1] + ' <img width="30px" height="30px" src="data/types/' + scores[0][1][i][2].toLowerCase() + '.png">: x' + scores[0][1][i][0] + '</td><td>' + scores[1][1][i][1] + ' <img width="30px" height="30px" src="data/types/' + scores[0][1][i][2].toLowerCase() + '.png">: x' + scores[1][1][i][0] + '</td></tr>');
+            if (scores.length > 0) {
+                var div = $("#results");
+
+                var image = getTemImage(all_temtem, scores[0][0]);
+                var image1 = '';
+                var beatFirst = '<th>Best to beat <img width="30px" height="30px" src="' + image + '"> ' + scores[0][0] + '</th>';
+                var beatSecond = '';
+
+                if (scores.length > 1) {
+                    image1 = getTemImage(all_temtem, scores[1][0]);
+                    beatSecond = '<th>Best to beat <img width="30px" height="30px" src="' + image1 + '"> ' + scores[1][0] + '</th>';
+                }
+
+                var table = $('<table><thead><tr>' + beatFirst + beatSecond + '</tr></thead></table>');
+                var tbody = $('<tbody></tbody>');
+                var nbOfTemtem = scores[0][1].length;
+                for (var i = 0; i < nbOfTemtem; i++) {
+                    var image = getTemImage(all_temtem, scores[0][1][i][1]);
+                    var firstTem = '<td><img width="30px" height="30px" src="' + image + '"> ' + scores[0][1][i][1] + ' <img width="30px" height="30px" src="data/types/' + scores[0][1][i][2].toLowerCase() + '.png">: x' + scores[0][1][i][0] + '</td>';
+                    var secondTem = '';
+                    if (scores.length > 1) {
+                        image = getTemImage(all_temtem, scores[1][1][i][1]);
+                        secondTem = '<td><img width="30px" height="30px" src="' + image + '"> ' + scores[1][1][i][1] + ' <img width="30px" height="30px" src="data/types/' + scores[1][1][i][2].toLowerCase() + '.png">: x' + scores[1][1][i][0] + '</td>';
+                    }
+                    tbody.append('<tr>' + firstTem + secondTem + '</tr>');
+                }
+                div.children().remove();
+                table.append(tbody);
+                div.append(table);
             }
-            div.children().remove();
-            table.append(tbody);
-            div.append(table);
         });
 
         $('#temtem-modal li').click(function() {

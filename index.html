@@ -10,7 +10,6 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/styles.css?v=0.1">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-        <script src="js/fight_helper.js"></script>
     </head>
     <body>
         <header>
@@ -32,44 +31,70 @@
                 </div>
             </nav>
         </header>
-        <div id="choose-temtem" class="row">
-            <div id="your-temtem" class="col-md-4">
+        <h1>Temtem Fight Helper</h1>
+        <div id="choose-temtem">
+            <div id="your-temtem" class="temtem-panel">
+                <h3>Select the temtem in your team</h3>
                 <div class="temtem-entry">
-                    <img width="50px" height="50px" src="data/placeholder.png" class="temtem-image">
+                    <img width="50px" height="50px" src="data/placeholder.png" class="temtem-icon">
                     <div class="temtem-info">
-                        <span class="temtem-select">Please click to select a temtem</span>
-                        <span class="temtem-name">Oree</span>
-                        <div class="temtem-types">
-                            <span class="temtem-type digital">Digital</span>
-                        </div>
+                        <span class="temtem-select">Click to select a temtem</span>
                     </div>
                 </div>
-                <div class="temtem-entry active">
-                    <img width="50px" height="50px" src="https://gamepedia.cursecdn.com/temtem_gamepedia_en/9/99/Oree.png?version=b87bf4475ec33f6d19738fbb2f27c7cb" class="temtem-image">
+                <div class="temtem-entry">
+                    <img width="50px" height="50px" src="data/placeholder.png" class="temtem-icon">
                     <div class="temtem-info">
-                        <span class="temtem-select">Please select a temtem</span>
-                        <span class="temtem-name">Oree</span>
-                        <div class="temtem-types">
-                            <span class="temtem-type digital">Digital</span>
-                            <span class="temtem-type mental">Mental</span>
-                        </div>
+                        <span class="temtem-select">Click select a temtem</span>
                     </div>
                 </div>
-                <div class="temtem-entry active">
-                    <img width="50px" height="50px" src="https://gamepedia.cursecdn.com/temtem_gamepedia_en/9/99/Oree.png?version=b87bf4475ec33f6d19738fbb2f27c7cb" class="temtem-image">
+                <div class="temtem-entry">
+                    <img width="50px" height="50px" src="data/placeholder.png" class="temtem-icon">
                     <div class="temtem-info">
-                        <span class="temtem-select">Please select a temtem</span>
-                        <span class="temtem-name">Oree</span>
-                        <div class="temtem-types">
-                            <span class="temtem-type digital">Digital</span>
-                        </div>
+                        <span class="temtem-select">Click select a temtem</span>
+                    </div>
+                </div>
+                <div class="temtem-entry">
+                    <img width="50px" height="50px" src="data/placeholder.png" class="temtem-icon">
+                    <div class="temtem-info">
+                        <span class="temtem-select">Click select a temtem</span>
+                    </div>
+                </div>
+                <div class="temtem-entry">
+                    <img width="50px" height="50px" src="data/placeholder.png" class="temtem-icon">
+                    <div class="temtem-info">
+                        <span class="temtem-select">Click select a temtem</span>
                     </div>
                 </div>
             </div>
-            <div id="choose-temtem-panel" class="col-md-4">
+            <div id="enemy-temtem" class="temtem-panel">
+                <h3>Select the temtem currently fighting you</h3>
+                <div class="temtem-entry">
+                    <img width="50px" height="50px" src="data/placeholder.png" class="temtem-icon">
+                    <div class="temtem-info">
+                        <span class="temtem-select">Click to select a temtem</span>
+                    </div>
+                </div>
+                <div class="temtem-entry">
+                    <img width="50px" height="50px" src="data/placeholder.png" class="temtem-icon">
+                    <div class="temtem-info">
+                        <span class="temtem-select">Click select a temtem</span>
+                    </div>
+                </div>
             </div>
-            <div id="enemy-temtem" class="col-md-4">
+        </div>
+        <div id="calculate">
+            <a href="#">Calculate</a>
+        </div>
+        <div id="results">
+        </div>
+        <div id="temtem-modal">
+			<div class="dialog">
+				<ul>
+                </ul>
             </div>
         </div>
     </body>
+    <footer>
+        <script src="js/fight_helper.js"></script>
+    </footer>
 </html>

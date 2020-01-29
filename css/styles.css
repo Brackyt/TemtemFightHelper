@@ -1,5 +1,9 @@
 h1 {
     text-align: center;
+    background: -webkit-linear-gradient(#fdd678, #f8af65);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 20px 0;
 }
 
 .navbar-brand {
@@ -25,9 +29,10 @@ h1 {
 }
 
 .temtem-entry > img {
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 50%;
     margin-right: 10px;
+    background: white;
 }
 
 .temtem-entry .temtem-info {
@@ -181,9 +186,14 @@ h1 {
 #temtem-modal .dialog {
 	max-width: 600px;
 	width: 100%;
-	padding: calc(2.4rem / 2);
-	overflow-y: auto;
+    padding: 10px 0;
+}
+
+#temtem-modal .dialog .list-wrap {
+    overflow-y: auto;
     overflow-x: hidden;
+    height: 100%;
+    border: 1px solid black;
 }
 
 #temtem-modal .dialog ul {
@@ -193,6 +203,7 @@ h1 {
 	background-clip: padding-box;
 	box-shadow: 0 12px 15px 0 rgba(0,0,0,0,0,0.25);
 	list-style: none;
+    border-radius: 0 0 20px 20px;
 }
 
 #temtem-modal .dialog ul li {
@@ -206,15 +217,22 @@ h1 {
 #temtem-modal .dialog ul li:hover {
     background: #4f504f;
     color: white;
+    cursor: pointer;
 }
 
 #temtem-modal .dialog ul li img {
 	border: 1px solid white;
     border-radius: 50%;
+    background: white;
 }
 
-#temtem-modal .dialog ul li:hover {
-	cursor: pointer;
+#temtem-modal .dialog ul li > div,
+#temtem-modal .dialog ul li > span {
+    flex: 1;
+}
+
+#temtem-modal .dialog ul li .temtem-types {
+    justify-content: flex-end;
 }
 
 #results table {
@@ -243,6 +261,7 @@ h1 {
 #results thead img {
     border: 1px solid black;
     border-radius: 50%;
+    background: white;
 }
 
 #choose-temtem {
@@ -268,4 +287,14 @@ h1 {
 #calculate,
 #results {
     margin-bottom: 20px;
+}
+
+.input-query {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
+    background: #ecececfa;
+    color: black;
+    border: none;
+    border: 1px solid black;
 }

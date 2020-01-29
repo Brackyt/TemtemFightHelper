@@ -127,11 +127,11 @@ $(document).ready(function() {
 
     getTemtemJSON('https://raw.githubusercontent.com/Brackyt/TemtemFightHelper/master/data/temtem.json', function (all_temtem) {
         var modal_list = $('#temtem-modal .dialog ul');
-        modal_list.append('<li data-name="none"><span class="temtem-name">None</span></li>');
+        modal_list.append('<li data-search-on-list="list-item" data-name="none"><span class="temtem-name">None</span></li>');
         all_temtem.forEach((temtem, i) => {
-            var li = $('<li data-name="' + temtem['name'] + '"></li>');
+            var li = $('<li data-search-on-list="list-item" data-name="' + temtem['name'] + '"></li>');
 
-            li.append('<img width="50px" height="50px" class="temtem-icon" src="' + temtem['image'] + '">');
+            li.append('<div class="image-container"><img width="50px" height="50px" class="temtem-icon" src="' + temtem['image'] + '"></div>');
             li.append('<span class="temtem-name">' + temtem['name'] + '</span>');
 
             var div = $('<div class="temtem-types"></div>');
@@ -142,6 +142,7 @@ $(document).ready(function() {
             li.append(div);
             modal_list.append(li);
         });
+        SearchOnList.init($('[data-behaviour=search-on-list]'));
 
         $('#temtem-modal').click(function(event) {
             if(event.target.id == "dialog" || $(event.target).closest('#dialog').length)
@@ -210,13 +211,12 @@ $(document).ready(function() {
             }
         });
 
-        $('#temtem-modal li').click(function() {
+        $("#temtem-modal").on('click', 'li', function() {
             $('#temtem-modal').toggleClass("active");
             if (currentEditTemtem != undefined) {
                 var entry = $('#' + currentEditTemtem[0]).children().eq(currentEditTemtem[1]);
                 var info = entry.find(".temtem-info");
                 var name = $(this).data("name");
-
                 if (name !== 'none') {
                     var types = $(this).find(".temtem-types").clone();
                     var img = $(this).find(".temtem-icon").clone();

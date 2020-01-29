@@ -94,12 +94,16 @@
         <div id="results">
         </div>
         <div id="temtem-modal">
-            <div id="dialog" class="dialog">
-                <ul></ul>
+            <div id="dialog" class="dialog" data-behaviour="search-on-list">
+                <input type="text" class="input-query" data-search-on-list="search" placeholder="Search by name"/>
+                <div class="list-wrap">
+                    <ul data-search-on-list="list"></ul>
+                </div>
             </div>
         </div>
     </body>
     <footer>
         <script src="js/fight_helper.js"></script>
+        <script src="js/search.js"></script>
     </footer>
 </html>

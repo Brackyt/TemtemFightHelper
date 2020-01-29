@@ -350,3 +350,14 @@ h1 {
     border: none;
     border: 1px solid black;
 }
+
+.about-info {
+    background: #4f504f;
+    color: white;
+    padding: 10px;
+}
+
+.about-info h2 {
+    margin: 0;
+    margin-bottom: 10px;
+}

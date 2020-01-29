@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 h1 {
     text-align: center;
     background: -webkit-linear-gradient(#fdd678, #f8af65);
@@ -16,16 +18,22 @@ h1 {
 }
 
 .temtem-entry {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 0 10px;
     cursor: pointer;
     margin-bottom: 10px;
 }
 
 .temtem-entry:nth-child(2n+1):not(h3) {
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
 }
 
 .temtem-entry > img {
@@ -39,14 +47,23 @@ h1 {
     color: white;
     background-color: #30322f;
     padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     border-radius: 20px;
 }
 
 .temtem-type {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .temtem-type:before {
@@ -119,8 +136,13 @@ h1 {
 }
 
 .temtem-types {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
 }
 
 .temtem-entry.active .temtem-select,
@@ -131,9 +153,15 @@ h1 {
 }
 
 #calculate {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 #calculate a {
@@ -153,7 +181,8 @@ h1 {
 #calculate a:hover,
 .temtem-entry:hover .temtem-info,
 .temtem-entry:hover img {
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
 }
 
 #temtem-modal .temtem-type {
@@ -165,8 +194,12 @@ h1 {
 }
 
 #temtem-modal {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-	justify-content: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	position: fixed;
 	background: transparent;
 	top: 50px;
@@ -193,7 +226,6 @@ h1 {
     overflow-y: auto;
     overflow-x: hidden;
     height: 100%;
-    border: 1px solid black;
 }
 
 #temtem-modal .dialog ul {
@@ -201,16 +233,26 @@ h1 {
 	padding: 2.4rem;
 	background: #ecececfa;
 	background-clip: padding-box;
-	box-shadow: 0 12px 15px 0 rgba(0,0,0,0,0,0.25);
+	-webkit-box-shadow: 0 12px 15px 0 rgba(0,0,0,0,0,0.25);
+	        box-shadow: 0 12px 15px 0 rgba(0,0,0,0,0,0.25);
 	list-style: none;
     border-radius: 0 0 20px 20px;
+    border: 1px solid black;
 }
 
 #temtem-modal .dialog ul li {
 	padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-	align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+    -webkit-transition: all 150ms ease-in-out;
+    -o-transition: all 150ms ease-in-out;
     transition: all 150ms ease-in-out;
 }
 
@@ -228,11 +270,15 @@ h1 {
 
 #temtem-modal .dialog ul li > div,
 #temtem-modal .dialog ul li > span {
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
 }
 
 #temtem-modal .dialog ul li .temtem-types {
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
 }
 
 #results table {
@@ -265,13 +311,19 @@ h1 {
 }
 
 #choose-temtem {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-evenly;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     margin-bottom: 20px;
 }
 
 #choose-temtem .temtem-panel {
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     padding: 10px;
     background: #4f504f;
     border-radius: 20px;

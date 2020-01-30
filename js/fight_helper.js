@@ -142,7 +142,14 @@ $(document).ready(function() {
             li.append(div);
             modal_list.append(li);
         });
+
         SearchOnList.init($('[data-behaviour=search-on-list]'));
+
+        // if we can't blur background (not supported by browser), put a color
+        if ($.browser.mozilla) {
+            console.log("oui");
+            $("#temtem-modal .list-wrap").css({"background": "#222926"});
+        }
 
         $('#temtem-modal').click(function(event) {
             if(event.target.id == "dialog" || $(event.target).closest('#dialog').length)
@@ -192,7 +199,7 @@ $(document).ready(function() {
                     beatSecond = '<th>Best to beat <img width="30px" height="30px" src="' + image1 + '"> ' + scores[1][0] + '</th>';
                 }
 
-                var table = $('<table class="big-clip"><thead><tr>' + beatFirst + beatSecond + '</tr></thead></table>');
+                var table = $('<table class="big-clip blur-15"><thead><tr>' + beatFirst + beatSecond + '</tr></thead></table>');
                 var tbody = $('<tbody></tbody>');
                 var nbOfTemtem = scores[0][1].length;
                 for (var i = 0; i < nbOfTemtem; i++) {

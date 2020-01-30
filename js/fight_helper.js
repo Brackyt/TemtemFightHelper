@@ -145,33 +145,25 @@ $(document).ready(function() {
 
         SearchOnList.init($('[data-behaviour=search-on-list]'));
 
-        $('li').each(function(){
-            this.onclick = function() {}
-        });
-
-        $('.temtem-entry').each(function(){
-            this.onclick = function() {}
-        });
-
         // if we can't blur background (not supported by browser), put a color
         if (!$.browser.webkit) {
             $("#temtem-modal .list-wrap").css({"background": "#222926"});
         }
 
-        $('#temtem-modal').click(function(event) {
+        $(document).on('click touchstart', '#temtem-modal', function(event) {
             if(event.target.id == "dialog" || $(event.target).closest('#dialog').length)
                 return;
             $('#temtem-modal').toggleClass("active");
         });
 
-        $('.temtem-entry').click(function() {
+        $(document).on('click touchstart', '.temtem-entry', function() {
             id = $(this).parent().attr('id');
             currentEditTemtem = [id, $(this).index()];
             modalOpened = true;
             $('#temtem-modal').toggleClass("active");
         });
 
-        $('#calculate a').click(function() {
+        $('#calculate').on('click touchstart', 'a', function() {
             var yourTemtem = $('#your-temtem').children();
             var enemyTemtem = $('#enemy-temtem').children();
             allYourTemtem = [];
@@ -226,7 +218,7 @@ $(document).ready(function() {
             }
         });
 
-        $("#temtem-modal").on('click', 'li', function() {
+        $("#temtem-modal").on('click touchstart', 'li', function() {
             $('#temtem-modal').toggleClass("active");
             if (currentEditTemtem != undefined) {
                 var entry = $('#' + currentEditTemtem[0]).children().eq(currentEditTemtem[1]);

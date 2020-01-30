@@ -145,6 +145,14 @@ $(document).ready(function() {
 
         SearchOnList.init($('[data-behaviour=search-on-list]'));
 
+        $('li').each(function(){
+            this.onclick = function() {}
+        });
+
+        $('.temtem-entry').each(function(){
+            this.onclick = function() {}
+        });
+
         // if we can't blur background (not supported by browser), put a color
         if (!$.browser.webkit) {
             $("#temtem-modal .list-wrap").css({"background": "#222926"});
@@ -185,7 +193,6 @@ $(document).ready(function() {
             });
 
             var scores = doCalculations(all_temtem, allYourTemtem, allEnemyTemtem);
-            console.log(scores);
             if (scores.length > 0) {
                 var div = $("#results");
 

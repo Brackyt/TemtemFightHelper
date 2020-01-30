@@ -146,24 +146,25 @@ $(document).ready(function() {
         SearchOnList.init($('[data-behaviour=search-on-list]'));
 
         // if we can't blur background (not supported by browser), put a color
-        if (!$.browser.webkit) {
+
+        if ((!$.browser.webkit && !$.browser.chrome) || $.browser.safari || $.browser.mozilla) {
             $("#temtem-modal .list-wrap").css({"background": "#222926"});
         }
 
-        $('#temtem-modal').click(function(event) {
+        $('#temtem-modal').on('click touch', function(event) {
             if(event.target.id == "dialog" || $(event.target).closest('#dialog').length)
                 return;
             $('#temtem-modal').toggleClass("active");
         });
 
-        $('.temtem-entry').click(function() {
+        $('.temtem-entry').on('click touch', function() {
             id = $(this).parent().attr('id');
             currentEditTemtem = [id, $(this).index()];
             modalOpened = true;
             $('#temtem-modal').toggleClass("active");
         });
 
-        $('#calculate a').click(function() {
+        $('#calculate a').on('click touch', function() {
             var yourTemtem = $('#your-temtem').children();
             var enemyTemtem = $('#enemy-temtem').children();
             allYourTemtem = [];
@@ -218,7 +219,7 @@ $(document).ready(function() {
             }
         });
 
-        $('#temtem-modal li').click(function() {
+        $('#temtem-modal li').on('click touch', function() {
             $('#temtem-modal').toggleClass("active");
             if (currentEditTemtem != undefined) {
                 var entry = $('#' + currentEditTemtem[0]).children().eq(currentEditTemtem[1]);

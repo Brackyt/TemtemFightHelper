@@ -146,8 +146,7 @@ $(document).ready(function() {
         SearchOnList.init($('[data-behaviour=search-on-list]'));
 
         // if we can't blur background (not supported by browser), put a color
-        if ($.browser.mozilla) {
-            console.log("oui");
+        if (!$.browser.webkit) {
             $("#temtem-modal .list-wrap").css({"background": "#222926"});
         }
 
@@ -186,6 +185,7 @@ $(document).ready(function() {
             });
 
             var scores = doCalculations(all_temtem, allYourTemtem, allEnemyTemtem);
+            console.log(scores);
             if (scores.length > 0) {
                 var div = $("#results");
 
@@ -204,11 +204,12 @@ $(document).ready(function() {
                 var nbOfTemtem = scores[0][1].length;
                 for (var i = 0; i < nbOfTemtem; i++) {
                     var image = getTemImage(all_temtem, scores[0][1][i][1]);
-                    var firstTem = '<td><img width="30px" height="30px" src="' + image + '"> ' + scores[0][1][i][1] + ' <img width="30px" height="30px" src="data/types/' + scores[0][1][i][2].toLowerCase() + '.png">: x' + scores[0][1][i][0] + '</td>';
+                    var weakness = scores[0][1][i][3];
+                    var firstTem = '<td><img width="30px" height="30px" src="' + image + '"> ' + scores[0][1][i][1] + ((weakness > 1) ? ' [WEAK x' + weakness + ']' : '') + ' <img width="30px" height="30px" src="data/types/' + scores[0][1][i][2].toLowerCase() + '.png">: x' + scores[0][1][i][0] + '</td>';
                     var secondTem = '';
                     if (scores.length > 1) {
                         image = getTemImage(all_temtem, scores[1][1][i][1]);
-                        secondTem = '<td><img width="30px" height="30px" src="' + image + '"> ' + scores[1][1][i][1] + ' <img width="30px" height="30px" src="data/types/' + scores[1][1][i][2].toLowerCase() + '.png">: x' + scores[1][1][i][0] + '</td>';
+                        secondTem = '<td><img width="30px" height="30px" src="' + image + '"> ' + scores[1][1][i][1] + ((weakness > 1) ? ' [WEAK x' + weakness + ']' : '') + ' <img width="30px" height="30px" src="data/types/' + scores[1][1][i][2].toLowerCase() + '.png">: x' + scores[1][1][i][0] + '</td>';
                     }
                     tbody.append('<tr>' + firstTem + secondTem + '</tr>');
                 }
@@ -229,7 +230,7 @@ $(document).ready(function() {
                     var img = $(this).find(".temtem-icon").clone();
                     entry.find("img").remove();
                     info.children().not(':first').remove();
-                    entry.prepend(img);
+                    info.prepend(img);
                     info.append('<span class="temtem-name">' + name + '</span>');
                     info.append(types);
                     entry.addClass("active");

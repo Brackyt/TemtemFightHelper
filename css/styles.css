@@ -157,6 +157,7 @@ header {
         -ms-flex-direction: column;
             flex-direction: column;
     border-radius: 20px;
+    flex-direction: row;
 }
 
 .temtem-entry:hover .temtem-info,
@@ -407,18 +408,30 @@ header {
     margin-right: auto;
 }
 
+#results table td {
+    text-align: center;
+}
+
+#results table th {
+    text-align: center;
+}
+
 #results table th,
 #results table td {
     padding: 1em;
 }
 
-#results table tr {
+#results table tr:not(:last-child) {
     border-bottom: 1px solid white;
 }
 
 #results table tr th:first-child:not(:last-child),
 #results table tr td:first-child:not(:last-child) {
-    border-right: 1px solid white;
+    border-right: 2px solid #1ad1d3;
+}
+
+#results thead tr {
+    border-bottom: 2px solid #1ad1d3;
 }
 
 #results td img:first-of-type,

@@ -150,20 +150,20 @@ $(document).ready(function() {
             $("#temtem-modal .list-wrap").css({"background": "#222926"});
         }
 
-        $(document).on('click touchstart', '#temtem-modal', function(event) {
+        $('#temtem-modal').click(function(event) {
             if(event.target.id == "dialog" || $(event.target).closest('#dialog').length)
                 return;
             $('#temtem-modal').toggleClass("active");
         });
 
-        $(document).on('click touchstart', '.temtem-entry', function() {
+        $('.temtem-entry').click(function() {
             id = $(this).parent().attr('id');
             currentEditTemtem = [id, $(this).index()];
             modalOpened = true;
             $('#temtem-modal').toggleClass("active");
         });
 
-        $('#calculate').on('click touchstart', 'a', function() {
+        $('#calculate a').click(function() {
             var yourTemtem = $('#your-temtem').children();
             var enemyTemtem = $('#enemy-temtem').children();
             allYourTemtem = [];
@@ -218,7 +218,7 @@ $(document).ready(function() {
             }
         });
 
-        $("#temtem-modal").on('click touchstart', 'li', function() {
+        $('#temtem-modal li').click(function() {
             $('#temtem-modal').toggleClass("active");
             if (currentEditTemtem != undefined) {
                 var entry = $('#' + currentEditTemtem[0]).children().eq(currentEditTemtem[1]);

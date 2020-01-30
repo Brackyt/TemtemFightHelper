@@ -93,6 +93,7 @@ header {
     display: block;
     overflow: auto;
     z-index: 1;
+	scroll-behavior: smooth;
 }
 
 *:focus {

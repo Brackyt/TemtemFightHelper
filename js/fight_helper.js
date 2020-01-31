@@ -128,6 +128,8 @@ $(document).ready(function() {
     getTemtemJSON('https://raw.githubusercontent.com/Brackyt/TemtemFightHelper/master/data/temtem.json', function (all_temtem) {
         var modal_list = $('#temtem-modal .dialog ul');
 
+        modal_list.append('<li class="big-clip" data-search-on-list="list-item" data-name="none"><span class="temtem-name">None</span></li>');
+
         all_temtem.forEach((temtem, i) => {
             var li = $('<li class="big-clip" data-search-on-list="list-item" data-name="' + temtem['name'] + '"></li>');
 
@@ -142,8 +144,6 @@ $(document).ready(function() {
             li.append(div);
             modal_list.append(li);
         });
-
-        $('#temtem-modal .dialog ul').prepend('<li class="big-clip" data-search-on-list="list-item" data-name="none"><span class="temtem-name">None</span></li>');
 
         SearchOnList.init($('[data-behaviour=search-on-list]'));
 
@@ -187,37 +187,41 @@ $(document).ready(function() {
                 }
             });
 
-            var scores = doCalculations(all_temtem, allYourTemtem, allEnemyTemtem);
-            if (scores.length > 0) {
-                var div = $("#results");
+            if (allYourTemtem.length > 0 && allEnemyTemtem.length > 0) {
+                var scores = doCalculations(all_temtem, allYourTemtem, allEnemyTemtem);
+                if (scores.length > 0) {
+                    var div = $("#results");
 
-                var image = getTemImage(all_temtem, scores[0][0]);
-                var image1 = '';
-                var beatFirst = '<th><span>Best to beat </span><img width="40px" height="40px" src="' + image + '"><span> ' + scores[0][0] + '</span></th>';
-                var beatSecond = '';
+                    var image = getTemImage(all_temtem, scores[0][0]);
+                    var image1 = '';
+                    var beatFirst = '<th><span>Best to beat </span><img width="40px" height="40px" src="' + image + '"><span> ' + scores[0][0] + '</span></th>';
+                    var beatSecond = '';
 
-                if (scores.length > 1) {
-                    image1 = getTemImage(all_temtem, scores[1][0]);
-                    beatSecond = '<th><span>Best to beat </span><img width="40px" height="40px" src="' + image1 + '"><span> ' + scores[1][0] + '</span></th>';
-                }
-
-                var table = $('<table class="blur-15"><thead><tr>' + beatFirst + beatSecond + '</tr></thead></table>');
-                var tbody = $('<tbody></tbody>');
-                var nbOfTemtem = scores[0][1].length;
-                for (var i = 0; i < nbOfTemtem; i++) {
-                    var image = getTemImage(all_temtem, scores[0][1][i][1]);
-                    var weakness = scores[0][1][i][3];
-                    var firstTem = '<td><img width="40px" height="40px" src="' + image + '"><span> ' + scores[0][1][i][1] + ((weakness > 1) ? ' [WEAK x' + weakness + ']' : '') + ' </span><img width="30px" height="30px" src="data/types/' + scores[0][1][i][2].toLowerCase() + '.png"><span>: x' + scores[0][1][i][0] + '</span></td>';
-                    var secondTem = '';
                     if (scores.length > 1) {
-                        image = getTemImage(all_temtem, scores[1][1][i][1]);
-                        secondTem = '<td><img width="40px" height="40px" src="' + image + '"><span> ' + scores[1][1][i][1] + ((weakness > 1) ? ' [WEAK x' + weakness + ']' : '') + ' </span><img width="30px" height="30px" src="data/types/' + scores[1][1][i][2].toLowerCase() + '.png"><span>: x' + scores[1][1][i][0] + '</span></td>';
+                        image1 = getTemImage(all_temtem, scores[1][0]);
+                        beatSecond = '<th><span>Best to beat </span><img width="40px" height="40px" src="' + image1 + '"><span> ' + scores[1][0] + '</span></th>';
                     }
-                    tbody.append('<tr>' + firstTem + secondTem + '</tr>');
+
+                    var table = $('<table class="blur-15"><thead><tr>' + beatFirst + beatSecond + '</tr></thead></table>');
+                    var tbody = $('<tbody></tbody>');
+                    var nbOfTemtem = scores[0][1].length;
+                    for (var i = 0; i < nbOfTemtem; i++) {
+                        var image = getTemImage(all_temtem, scores[0][1][i][1]);
+                        var weakness = scores[0][1][i][3];
+                        var firstTem = '<td><img width="40px" height="40px" src="' + image + '"><span> ' + scores[0][1][i][1] + ((weakness > 1) ? ' [WEAK x' + weakness + ']' : '') + ' </span><img width="30px" height="30px" src="data/types/' + scores[0][1][i][2].toLowerCase() + '.png"><span>: x' + scores[0][1][i][0] + '</span></td>';
+                        var secondTem = '';
+                        if (scores.length > 1) {
+                            image = getTemImage(all_temtem, scores[1][1][i][1]);
+                            secondTem = '<td><img width="40px" height="40px" src="' + image + '"><span> ' + scores[1][1][i][1] + ((weakness > 1) ? ' [WEAK x' + weakness + ']' : '') + ' </span><img width="30px" height="30px" src="data/types/' + scores[1][1][i][2].toLowerCase() + '.png"><span>: x' + scores[1][1][i][0] + '</span></td>';
+                        }
+                        tbody.append('<tr>' + firstTem + secondTem + '</tr>');
+                    }
+                    div.children().remove();
+                    table.append(tbody);
+                    div.append(table);
                 }
-                div.children().remove();
-                table.append(tbody);
-                div.append(table);
+            } else {
+                $("#results").children().remove();
             }
         });
 

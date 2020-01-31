@@ -125,8 +125,12 @@
                 if (a.name > b.name) return 1;
                 return 0;
             }).reduce(function(items, item) {
-                if (item.visible)
-                    items.push(item.element);
+                if (item.visible) {
+                    if (item.name.toLowerCase() == "none")
+                        items.unshift(item.element);
+                    else
+                        items.push(item.element);
+                }
                 return items;
             }, []);
         }

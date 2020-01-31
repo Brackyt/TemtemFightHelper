@@ -69,12 +69,14 @@ footer {
     -webkit-clip-path: polygon(83.96% 22.00%, 59.9% 0%, 40.05% 14%, 26.88% 4%, 18.2% 18%, 15.31% 2%, 5.06% 16%, 0.66% 4%, 0% 32%, 0.59% 56%, 0.34% 95%, 10.55% 92%, 25.37% 97%, 50.58% 92%, 75.15% 91%, 100% 100%, 99.45% 64%, 98.71% 30%, 99% 0%);
 }
 
-footer a {
+footer a,
+.about a {
     color: #1ad1d3;
     text-decoration: none;
 }
 
-footer a:hover {
+footer a:hover,
+.about a:hover {
     color: black;
     text-decoration: none;
 }
@@ -519,15 +521,19 @@ header {
     color: white;
 }
 
-.about-info {
+.about .row > div {
     background: #0000005c;
     color: white;
     padding: 20px;
 }
 
-.about-info h2 {
+.about .row > div h2 {
     margin: 0;
     margin-bottom: 10px;
+}
+
+.about .row:first-child {
+    margin-bottom: 20px;
 }
 
 .big-clip {

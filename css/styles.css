@@ -34,7 +34,7 @@ body *:not(:first-child):not(".background") {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 0;
+    z-index: -1;
 }
 
 footer {
@@ -318,13 +318,14 @@ header {
 	        justify-content: center;
 	position: fixed;
 	background: transparent;
-	top: 50px;
+	top: 0;
 	left: 0;
 	right: 0;
-	bottom: 50px;
+	bottom: 0;
     will-change: visibility, opacity;
     visibility: hidden;
 	opacity: 0;
+    z-index: 3;
 }
 
 #temtem-modal.active {
@@ -333,9 +334,11 @@ header {
 }
 
 #temtem-modal .dialog {
+    position: absolute;
 	max-width: 600px;
 	width: 100%;
-    padding: 10px 0;
+    top: 50px;
+    bottom: 50px;
 }
 
 #temtem-modal .dialog .list-wrap {
@@ -512,6 +515,15 @@ header {
 
 .blur-30 {
     backdrop-filter: blur(30px);
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: red;
+    cursor: pointer;
 }
 
 @media (max-width: 700px) {

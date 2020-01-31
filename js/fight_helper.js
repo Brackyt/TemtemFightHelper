@@ -127,7 +127,7 @@ $(document).ready(function() {
 
     getTemtemJSON('https://raw.githubusercontent.com/Brackyt/TemtemFightHelper/master/data/temtem.json', function (all_temtem) {
         var modal_list = $('#temtem-modal .dialog ul');
-        modal_list.append('<li class="big-clip" data-search-on-list="list-item" data-name="none"><span class="temtem-name">None</span></li>');
+
         all_temtem.forEach((temtem, i) => {
             var li = $('<li class="big-clip" data-search-on-list="list-item" data-name="' + temtem['name'] + '"></li>');
 
@@ -145,6 +145,8 @@ $(document).ready(function() {
 
         SearchOnList.init($('[data-behaviour=search-on-list]'));
 
+        $('#temtem-modal .dialog ul').prepend('<li class="big-clip" data-search-on-list="list-item" data-name="none"><span class="temtem-name">None</span></li>');
+
         // if we can't blur background (not supported by browser), put a color
 
         if ((!$.browser.webkit && !$.browser.chrome) || $.browser.safari || $.browser.mozilla) {
@@ -152,7 +154,7 @@ $(document).ready(function() {
         }
 
         $('#temtem-modal').on('click touch', function(event) {
-            if(event.target.id == "dialog" || $(event.target).closest('#dialog').length)
+            if(!$(event.target).hasClass('close-button') && (event.target.id == "dialog" || $(event.target).closest('#dialog').length))
                 return;
             $('#temtem-modal').toggleClass("active");
         });
@@ -237,7 +239,7 @@ $(document).ready(function() {
                 } else {
                     entry.removeClass("active");
                     entry.find("img").attr("src", "data/placeholder.png");
-                    info.children().not(':first').remove();
+                    info.children().not('img').not('.temtem-select').remove();
                 }
 
                 currentEditTemtem = undefined;

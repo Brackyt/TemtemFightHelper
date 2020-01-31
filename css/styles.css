@@ -1,5 +1,7 @@
 /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
 
+@import url('https://fonts.googleapis.com/css?family=Acme|Montserrat&display=swap');
+
 html, body {
     height:100%;
     margin:0;
@@ -18,6 +20,15 @@ body {
 
 body *:not(:first-child):not(".background") {
     z-index: 1;
+}
+
+* {
+    font-family: 'Acme', sans-serif;
+}
+
+h1,
+.navbar span {
+    font-family: 'Acme', sans-serif;
 }
 
 .background {
@@ -82,6 +93,7 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     color: white;
+    font-size: 50px;
 }
 
 header {
@@ -100,14 +112,17 @@ header {
     outline: none;
 }
 
-.navbar-brand {
+.navbar .navbar-brand {
     padding: 0px;
+    display: flex;
+    display: flex;
+    align-items: center;
+    color: white;
 }
 
 .navbar-brand > img {
     height: 100%;
     padding: 10px;
-    width: auto;
 }
 
 .navbar {
@@ -159,6 +174,7 @@ header {
             flex-direction: column;
     border-radius: 20px;
     flex-direction: row;
+    font-size: 16px;
 }
 
 .temtem-entry:hover .temtem-info,
@@ -347,6 +363,7 @@ header {
     height: 100%;
     clip-path: polygon(1.301% 1.622%,1.5% 1.4%,3.444% 0.35%,34.5% 0.4%,100% 0.2%,100% 100%,100% 100%,100% 100%,100% 100%,97.071% 99.626%,78.347% 99.8%,47.209% 99.5%,41.971% 99.7%,27.716% 100%,9.695% 99.75%,0% 100%,2% 31.835%,0.837% 21.723%,0 16.479%,1.301% 3.622%);
     background: #0000005c;
+    font-size: 16px;
 }
 
 #temtem-modal .dialog ul {
@@ -410,6 +427,9 @@ header {
     color: white;
     margin-left: auto;
     margin-right: auto;
+    font-size: 18px;
+    -webkit-clip-path: polygon(3.96% 0.38%, 35.32% 0.75%, 46.444% 0px, 55.98% 0.00%, 65.87% 0.8%, 93.49% 0%, 97.46% 15px, 99.372% 47.94%, 100% 84.27%, 98.745% 91.76%, 99.582% 94.382%, 97.071% 99.626%, 53.68% 98.98%, 50.04% 99.47%, 13.64% 99.14%, 11.716% 100%, 6.36% 99.3%, 0px 100%, 0px 31.835%, 0.837% 21.723%, 0px 16.479%, 1.3% 3.58%);
+    clip-path: polygon(3.96% 0.38%, 35.32% 0.75%, 46.444% 0px, 55.98% 0.00%, 65.87% 0.8%, 93.49% 0%, 97.46% 15px, 99.372% 47.94%, 100% 84.27%, 98.745% 91.76%, 99.582% 94.382%, 97.071% 99.626%, 53.68% 98.98%, 50.04% 99.47%, 13.64% 99.14%, 11.716% 100%, 6.36% 99.3%, 0px 100%, 0px 31.835%, 0.837% 21.723%, 0px 16.479%, 1.3% 3.58%);
 }
 
 #results table td {
@@ -422,7 +442,12 @@ header {
 
 #results table th,
 #results table td {
-    padding: 1em;
+    padding: .6em;
+}
+
+#results table th > *,
+#results table td > * {
+    vertical-align: middle;
 }
 
 #results table tr:not(:last-child) {
@@ -440,9 +465,10 @@ header {
 
 #results td img:first-of-type,
 #results thead img {
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 50%;
     background: white;
+    margin: 0 4px;
 }
 
 #choose-temtem {
@@ -467,7 +493,7 @@ header {
 
 #choose-temtem .temtem-panel h3 {
     text-align: center;
-    font-size: 24px;
+    font-size: 26px;
     color: white;
 }
 

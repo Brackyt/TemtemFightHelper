@@ -143,9 +143,9 @@ $(document).ready(function() {
             modal_list.append(li);
         });
 
-        SearchOnList.init($('[data-behaviour=search-on-list]'));
-
         $('#temtem-modal .dialog ul').prepend('<li class="big-clip" data-search-on-list="list-item" data-name="none"><span class="temtem-name">None</span></li>');
+
+        SearchOnList.init($('[data-behaviour=search-on-list]'));
 
         // if we can't blur background (not supported by browser), put a color
 
@@ -193,25 +193,25 @@ $(document).ready(function() {
 
                 var image = getTemImage(all_temtem, scores[0][0]);
                 var image1 = '';
-                var beatFirst = '<th>Best to beat <img width="30px" height="30px" src="' + image + '"> ' + scores[0][0] + '</th>';
+                var beatFirst = '<th><span>Best to beat </span><img width="40px" height="40px" src="' + image + '"><span> ' + scores[0][0] + '</span></th>';
                 var beatSecond = '';
 
                 if (scores.length > 1) {
                     image1 = getTemImage(all_temtem, scores[1][0]);
-                    beatSecond = '<th>Best to beat <img width="30px" height="30px" src="' + image1 + '"> ' + scores[1][0] + '</th>';
+                    beatSecond = '<th><span>Best to beat </span><img width="40px" height="40px" src="' + image1 + '"><span> ' + scores[1][0] + '</span></th>';
                 }
 
-                var table = $('<table class="big-clip blur-15"><thead><tr>' + beatFirst + beatSecond + '</tr></thead></table>');
+                var table = $('<table class="blur-15"><thead><tr>' + beatFirst + beatSecond + '</tr></thead></table>');
                 var tbody = $('<tbody></tbody>');
                 var nbOfTemtem = scores[0][1].length;
                 for (var i = 0; i < nbOfTemtem; i++) {
                     var image = getTemImage(all_temtem, scores[0][1][i][1]);
                     var weakness = scores[0][1][i][3];
-                    var firstTem = '<td><img width="30px" height="30px" src="' + image + '"> ' + scores[0][1][i][1] + ((weakness > 1) ? ' [WEAK x' + weakness + ']' : '') + ' <img width="30px" height="30px" src="data/types/' + scores[0][1][i][2].toLowerCase() + '.png">: x' + scores[0][1][i][0] + '</td>';
+                    var firstTem = '<td><img width="40px" height="40px" src="' + image + '"><span> ' + scores[0][1][i][1] + ((weakness > 1) ? ' [WEAK x' + weakness + ']' : '') + ' </span><img width="30px" height="30px" src="data/types/' + scores[0][1][i][2].toLowerCase() + '.png"><span>: x' + scores[0][1][i][0] + '</span></td>';
                     var secondTem = '';
                     if (scores.length > 1) {
                         image = getTemImage(all_temtem, scores[1][1][i][1]);
-                        secondTem = '<td><img width="30px" height="30px" src="' + image + '"> ' + scores[1][1][i][1] + ((weakness > 1) ? ' [WEAK x' + weakness + ']' : '') + ' <img width="30px" height="30px" src="data/types/' + scores[1][1][i][2].toLowerCase() + '.png">: x' + scores[1][1][i][0] + '</td>';
+                        secondTem = '<td><img width="40px" height="40px" src="' + image + '"><span> ' + scores[1][1][i][1] + ((weakness > 1) ? ' [WEAK x' + weakness + ']' : '') + ' </span><img width="30px" height="30px" src="data/types/' + scores[1][1][i][2].toLowerCase() + '.png"><span>: x' + scores[1][1][i][0] + '</span></td>';
                     }
                     tbody.append('<tr>' + firstTem + secondTem + '</tr>');
                 }
@@ -221,7 +221,7 @@ $(document).ready(function() {
             }
         });
 
-        $('#temtem-modal li').on('click touch', function() {
+        $(document).on('click touch', '#temtem-modal li', function() {
             $('#temtem-modal').toggleClass("active");
             if (currentEditTemtem != undefined) {
                 var entry = $('#' + currentEditTemtem[0]).children().eq(currentEditTemtem[1]);

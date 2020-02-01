@@ -114,6 +114,11 @@ header {
     outline: none;
 }
 
+#navbar.in .navbar-nav,
+#navbar.collapsing .navbar-nav {
+    margin-bottom: 40px;
+}
+
 .navbar .navbar-brand {
     padding: 0px;
     display: flex;
@@ -135,6 +140,11 @@ header {
 
 .navbar .navbar-nav > li > a {
     color: black;
+}
+
+.navbar .navbar-toggle {
+    padding: 10px;
+    background: #333;
 }
 
 .temtem-entry {

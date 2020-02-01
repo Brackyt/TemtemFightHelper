@@ -87,9 +87,10 @@ function doCalculations(allTemtem, yourTemtem, enemyTemtem) {
             }
             else if (enemy_types.length == 2 && user_types.length == 1) {
                 calc = damage_array[user_types[0][1]][enemy_types[0][1]] * damage_array[user_types[0][1]][enemy_types[1][1]];
-                enemy_calc = damage_array[enemy_types[0][1]][user_types[0][1]] * damage_array[enemy_types[1][1]][user_types[0][1]];
-                if (enemy_calc >= 2)
-                    weakness = enemy_calc;
+                enemy_calc = damage_array[enemy_types[0][1]][user_types[0][1]];
+                enemy_calc1 = damage_array[enemy_types[1][1]][user_types[0][1]];
+                if (enemy_calc >= 2 || enemy_calc1 >= 2)
+                    weakness = (enemy_calc >= 2) ? enemy_calc : enemy_calc1;
                 scores.push([calc, user_tem, user_types[0][0], weakness]);
             }
             else if (enemy_types.length == 1 && user_types.length == 2) {
@@ -105,10 +106,10 @@ function doCalculations(allTemtem, yourTemtem, enemyTemtem) {
                 calc1 = damage_array[user_types[0][1]][enemy_types[0][1]] * damage_array[user_types[0][1]][enemy_types[1][1]];
                 calc2 = damage_array[user_types[1][1]][enemy_types[0][1]] * damage_array[user_types[1][1]][enemy_types[1][1]];
 
-                enemy_calc1 = damage_array[enemy_types[0][1]][user_types[0][1]] * damage_array[enemy_types[0][1]][user_types[1][1]];
-                enemy_calc2 = damage_array[enemy_types[1][1]][user_types[0][1]] * damage_array[enemy_types[1][1]][user_types[1][1]];
-                if (enemy_calc1 * enemy_calc2 >= 2)
-                    weakness = enemy_calc1 * enemy_calc2;
+                enemy_calc = damage_array[enemy_types[0][1]][user_types[0][1]] * damage_array[enemy_types[0][1]][user_types[1][1]];
+                enemy_calc1 = damage_array[enemy_types[1][1]][user_types[0][1]] * damage_array[enemy_types[1][1]][user_types[1][1]];
+                if (enemy_calc >= 2 || enemy_calc1 >= 2)
+                    weakness = (enemy_calc >= 2) ? enemy_calc : enemy_calc1;
                 scores.push([calc1, user_tem, user_types[0][0], weakness]);
                 scores.push([calc2, user_tem, user_types[1][0], weakness]);
             }
@@ -212,6 +213,7 @@ $(document).ready(function() {
                         var secondTem = '';
                         if (scores.length > 1) {
                             image = getTemImage(all_temtem, scores[1][1][i][1]);
+                            weakness = scores[1][1][i][3];
                             secondTem = '<td><img width="40px" height="40px" src="' + image + '"><span> ' + scores[1][1][i][1] + ((weakness > 1) ? ' [WEAK x' + weakness + ']' : '') + ' </span><img width="30px" height="30px" src="data/types/' + scores[1][1][i][2].toLowerCase() + '.png"><span>: x' + scores[1][1][i][0] + '</span></td>';
                         }
                         tbody.append('<tr>' + firstTem + secondTem + '</tr>');

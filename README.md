@@ -15,3 +15,9 @@
 5. Do the **same thing** for the **right side** but with **temtem opposing you**
 6. **Click** on **"Calculate"**
 7. A **table** will **show under** with **which** of your **temtem** is **better to fight** the **opponents** ordered by strongest. **It shows** the **damage multiplier** you'll do on the enemy **depending** on the **attack type**.
+8. You can repeat this process to change the temtem in your team and the ones currently fighting you
+
+## What does the [WEAK] tag mean ?
+
+When one of your temtem is **weak to** an **opponent's attack** it'll have a **[WEAK]** tag with a multiplier.
+This is the **damage multiplier** the **enemy** will have when **attacking your temtem**.

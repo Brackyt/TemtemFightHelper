@@ -521,6 +521,10 @@ header {
     color: white;
 }
 
+.about ol {
+    margin-bottom: 20px;
+}
+
 .about .row > div {
     background: #0000005c;
     color: white;
@@ -556,6 +560,11 @@ header {
     font-size: 24px;
     color: red;
     cursor: pointer;
+}
+
+.weak {
+    background: #880000;
+    padding: 2px;
 }
 
 @media (max-width: 700px) {

@@ -209,13 +209,13 @@ $(document).ready(function() {
                     for (var i = 0; i < nbOfTemtem; i++) {
                         var image = getTemImage(all_temtem, scores[0][1][i][1]);
                         var weakness = scores[0][1][i][3];
-                        var firstTem = '<td><img width="40px" height="40px" src="' + image + '"><span> ' + scores[0][1][i][1] + ((weakness > 1) ? ' [WEAK x' + weakness + ']' : '') + ' </span><img width="30px" height="30px" src="data/types/' + scores[0][1][i][2].toLowerCase() + '.png"><span>: x' + scores[0][1][i][0] + '</span></td>';
+                        var firstTem = '<td><img width="40px" height="40px" src="' + image + '"><span> ' + scores[0][1][i][1] + ((weakness > 1) ? '</span> <span class="weak">[WEAK x' + weakness + ']' : '') + '</span> <img width="30px" height="30px" src="data/types/' + scores[0][1][i][2].toLowerCase() + '.png"><span>: x' + scores[0][1][i][0] + '</span></td>';
                         var secondTem = '';
-                        
+
                         if (scores.length > 1) {
                             image = getTemImage(all_temtem, scores[1][1][i][1]);
                             weakness = scores[1][1][i][3];
-                            secondTem = '<td><img width="40px" height="40px" src="' + image + '"><span> ' + scores[1][1][i][1] + ((weakness > 1) ? ' [WEAK x' + weakness + ']' : '') + ' </span><img width="30px" height="30px" src="data/types/' + scores[1][1][i][2].toLowerCase() + '.png"><span>: x' + scores[1][1][i][0] + '</span></td>';
+                            secondTem = '<td><img width="40px" height="40px" src="' + image + '"><span> ' + scores[1][1][i][1] + ((weakness > 1) ? '</span> <span class="weak">[WEAK x' + weakness + ']' : '') + '</span> <img width="30px" height="30px" src="data/types/' + scores[1][1][i][2].toLowerCase() + '.png"><span>: x' + scores[1][1][i][0] + '</span></td>';
                         }
                         tbody.append('<tr>' + firstTem + secondTem + '</tr>');
                     }

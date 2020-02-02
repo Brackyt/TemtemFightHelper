@@ -17,7 +17,6 @@
 7. A **table** will **show under** with **which** of your **temtem** is **better to fight** the **opponents** ordered by strongest. **It shows** the **damage multiplier** you'll do on the enemy **depending** on the **attack type**.
 8. You can repeat this process to change the temtem in your team and the ones currently fighting you
 
-## What does the [WEAK] tag mean ?
-
-When one of your temtem is **weak to** an **opponent's attack** it'll have a **[WEAK]** tag with a multiplier.
-This is the **damage multiplier** the **enemy** will have when **attacking your temtem**.
+## What is Attack/Weakness Multiplier ?
+The **Attack Multiplier** collumn shows the **damage multiplier** **you'll have** when **attacking** the **ennemy** with the attack type shown (> 1 = good, == 1 = normal, < 1 = bad).\
+The **Weakness Multiplier** collumn shows the **damage multiplier** the **enemy will have** when **attacking your temtem** with the attack type(s) shown (> 1 = bad, == 1 = normal, < 1 = good)

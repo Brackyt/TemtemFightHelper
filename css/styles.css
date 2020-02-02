@@ -466,8 +466,9 @@ header {
     border-bottom: 1px solid white;
 }
 
-#results table tr th:first-child:not(:last-child),
-#results table tr td:first-child:not(:last-child) {
+#results table tr:first-child th:first-child:not(:last-child),
+#results table tr:not(:first-child) th:not(:last-child),
+#results table tr td:not(:last-child) {
     border-right: 2px solid #1ad1d3;
 }
 
@@ -475,7 +476,7 @@ header {
     border-bottom: 2px solid #1ad1d3;
 }
 
-#results td img:first-of-type,
+#results tr td:nth-child(odd) img:first-of-type,
 #results thead img {
     border: 1px solid white;
     border-radius: 50%;

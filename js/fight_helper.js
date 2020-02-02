@@ -78,40 +78,32 @@ function doCalculations(allTemtem, yourTemtem, enemyTemtem) {
         var scores = []
         yourTemtem.forEach((user_tem, i) => {
             var user_types = getTemTypes(allTemtem, user_tem);
-            var weakness = 0;
 
             if (enemy_types.length == 1 && user_types.length == 1) {
-                if (damage_array[enemy_types[0][1]][user_types[0][1]] >= 2)
-                    weakness = damage_array[enemy_types[0][1]][user_types[0][1]];
-                scores.push([damage_array[user_types[0][1]][enemy_types[0][1]], user_tem, user_types[0][0], weakness]);
+                var weakness = damage_array[enemy_types[0][1]][user_types[0][1]];
+                scores.push([damage_array[user_types[0][1]][enemy_types[0][1]], user_tem, user_types[0][0], [weakness], enemy_types]);
             }
             else if (enemy_types.length == 2 && user_types.length == 1) {
                 calc = damage_array[user_types[0][1]][enemy_types[0][1]] * damage_array[user_types[0][1]][enemy_types[1][1]];
-                enemy_calc = damage_array[enemy_types[0][1]][user_types[0][1]];
-                enemy_calc1 = damage_array[enemy_types[1][1]][user_types[0][1]];
-                if (enemy_calc >= 2 || enemy_calc1 >= 2)
-                    weakness = (enemy_calc >= 2) ? enemy_calc : enemy_calc1;
-                scores.push([calc, user_tem, user_types[0][0], weakness]);
+                var weakness = damage_array[enemy_types[0][1]][user_types[0][1]];
+                var weakness1 = damage_array[enemy_types[1][1]][user_types[0][1]];
+                scores.push([calc, user_tem, user_types[0][0], [weakness, weakness1], enemy_types]);
             }
             else if (enemy_types.length == 1 && user_types.length == 2) {
                 calc1 = damage_array[user_types[0][1]][enemy_types[0][1]];
                 calc2 = damage_array[user_types[1][1]][enemy_types[0][1]];
-                enemy_calc = damage_array[enemy_types[0][1]][user_types[0][1]] * damage_array[enemy_types[0][1]][user_types[1][1]];
-                if (enemy_calc >= 2)
-                    weakness = enemy_calc;
-                scores.push([calc1, user_tem, user_types[0][0], weakness]);
-                scores.push([calc2, user_tem, user_types[1][0], weakness]);
+                var weakness = damage_array[enemy_types[0][1]][user_types[0][1]] * damage_array[enemy_types[0][1]][user_types[1][1]];
+                scores.push([calc1, user_tem, user_types[0][0], [weakness], enemy_types]);
+                scores.push([calc2, user_tem, user_types[1][0], [weakness], enemy_types]);
             }
             else if (enemy_types.length == 2 && user_types.length == 2) {
                 calc1 = damage_array[user_types[0][1]][enemy_types[0][1]] * damage_array[user_types[0][1]][enemy_types[1][1]];
                 calc2 = damage_array[user_types[1][1]][enemy_types[0][1]] * damage_array[user_types[1][1]][enemy_types[1][1]];
 
-                enemy_calc = damage_array[enemy_types[0][1]][user_types[0][1]] * damage_array[enemy_types[0][1]][user_types[1][1]];
-                enemy_calc1 = damage_array[enemy_types[1][1]][user_types[0][1]] * damage_array[enemy_types[1][1]][user_types[1][1]];
-                if (enemy_calc >= 2 || enemy_calc1 >= 2)
-                    weakness = (enemy_calc >= 2) ? enemy_calc : enemy_calc1;
-                scores.push([calc1, user_tem, user_types[0][0], weakness]);
-                scores.push([calc2, user_tem, user_types[1][0], weakness]);
+                var weakness = damage_array[enemy_types[0][1]][user_types[0][1]] * damage_array[enemy_types[0][1]][user_types[1][1]];
+                var weakness1 = damage_array[enemy_types[1][1]][user_types[0][1]] * damage_array[enemy_types[1][1]][user_types[1][1]];
+                scores.push([calc1, user_tem, user_types[0][0], [weakness, weakness1], enemy_types]);
+                scores.push([calc2, user_tem, user_types[1][0], [weakness, weakness1], enemy_types]);
             }
         });
         scores.sort(sortByScore).reverse();
@@ -188,6 +180,7 @@ $(document).ready(function() {
                 }
             });
 
+            //I really need to clean this up, look at this garbage
             if (allYourTemtem.length > 0 && allEnemyTemtem.length > 0) {
                 var scores = doCalculations(all_temtem, allYourTemtem, allEnemyTemtem);
                 if (scores.length > 0) {
@@ -195,27 +188,45 @@ $(document).ready(function() {
 
                     var image = getTemImage(all_temtem, scores[0][0]);
                     var image1 = '';
-                    var beatFirst = '<th><span>Best to beat </span><img width="40px" height="40px" src="' + image + '"><span> ' + scores[0][0] + '</span></th>';
+                    var beatFirst = '<th colspan="2"><span>Best to beat </span><img width="40px" height="40px" src="' + image + '"><span> ' + scores[0][0] + '</span></th>';
+                    var columnsFirst = '<th>Attack multiplier</th><th>Weakness multiplier</th>';
                     var beatSecond = '';
+                    var columnsSecond = '';
 
                     if (scores.length > 1) {
                         image1 = getTemImage(all_temtem, scores[1][0]);
-                        beatSecond = '<th><span>Best to beat </span><img width="40px" height="40px" src="' + image1 + '"><span> ' + scores[1][0] + '</span></th>';
+                        beatSecond = '<th colspan="2"><span>Best to beat </span><img width="40px" height="40px" src="' + image1 + '"><span> ' + scores[1][0] + '</span></th>';
+                        columnsSecond = columnsFirst;
                     }
 
-                    var table = $('<table class="blur-15"><thead><tr>' + beatFirst + beatSecond + '</tr></thead></table>');
+                    var table = $('<table class="blur-15"><thead><tr>' + beatFirst + beatSecond + '</tr><tr>' + columnsFirst + columnsSecond + '</tr></thead></table>');
                     var tbody = $('<tbody></tbody>');
                     var nbOfTemtem = scores[0][1].length;
                     for (var i = 0; i < nbOfTemtem; i++) {
                         var image = getTemImage(all_temtem, scores[0][1][i][1]);
-                        var weakness = scores[0][1][i][3];
-                        var firstTem = '<td><img width="40px" height="40px" src="' + image + '"><span> ' + scores[0][1][i][1] + ((weakness > 1) ? '</span> <span class="weak">[WEAK x' + weakness + ']' : '') + '</span> <img width="30px" height="30px" src="data/types/' + scores[0][1][i][2].toLowerCase() + '.png"><span>: x' + scores[0][1][i][0] + '</span></td>';
+                        var weakness = '';
+                        var weakness1 = '';
+                        if (scores.length > 1) {
+                            if (scores[0][1][i][4].length > 1)
+                                weakness = '<img width="30px" height="30px" src="data/types/' + scores[0][1][i][4][0][0].toLowerCase() + '.png"><span>x' + scores[0][1][i][3][0] + ' </span><img width="30px" height="30px" src="data/types/' + scores[0][1][i][4][1][0].toLowerCase() + '.png"><span>x' + scores[0][1][i][3][1] + '</span>';
+                            else
+                                weakness = '<img width="30px" height="30px" src="data/types/' + scores[0][1][i][4][0][0].toLowerCase() + '.png"><span>x' + scores[0][1][i][3][0] + '</span>';
+                            if (scores[1][1][i][4].length > 1)
+                                weakness1 = '<img width="30px" height="30px" src="data/types/' + scores[1][1][i][4][0][0].toLowerCase() + '.png"><span>x' + scores[1][1][i][3][0] + ' </span><img width="30px" height="30px" src="data/types/' + scores[1][1][i][4][1][0].toLowerCase() + '.png"><span>x' + scores[1][1][i][3][1] + '</span>';
+                            else
+                                weakness1 = '<img width="30px" height="30px" src="data/types/' + scores[1][1][i][4][0][0].toLowerCase() + '.png"><span>x' + scores[1][1][i][3][0] + '</span>';
+                        } else {
+                            if (scores[0][1][i][4].length > 1)
+                                weakness = '<img width="30px" height="30px" src="data/types/' + scores[0][1][i][4][0][0].toLowerCase() + '.png"><span>x' + scores[0][1][i][3][0] + ' </span><img width="30px" height="30px" src="data/types/' + scores[0][1][i][4][1][0].toLowerCase() + '.png"><span>x' + scores[0][1][i][3][1] + '</span>';
+                            else
+                                weakness = '<img width="30px" height="30px" src="data/types/' + scores[0][1][i][4][0][0].toLowerCase() + '.png"><span>x' + scores[0][1][i][3][0] + '</span>';
+                        }
+                        var firstTem = '<td><img width="40px" height="40px" src="' + image + '"><span> ' + scores[0][1][i][1] + '</span> <img width="30px" height="30px" src="data/types/' + scores[0][1][i][2].toLowerCase() + '.png"><span>: x' + scores[0][1][i][0] + '</span></td><td>' + weakness + '</td>';
                         var secondTem = '';
 
                         if (scores.length > 1) {
                             image = getTemImage(all_temtem, scores[1][1][i][1]);
-                            weakness = scores[1][1][i][3];
-                            secondTem = '<td><img width="40px" height="40px" src="' + image + '"><span> ' + scores[1][1][i][1] + ((weakness > 1) ? '</span> <span class="weak">[WEAK x' + weakness + ']' : '') + '</span> <img width="30px" height="30px" src="data/types/' + scores[1][1][i][2].toLowerCase() + '.png"><span>: x' + scores[1][1][i][0] + '</span></td>';
+                            secondTem = '<td><img width="40px" height="40px" src="' + image + '"><span> ' + scores[1][1][i][1] + '</span> <img width="30px" height="30px" src="data/types/' + scores[1][1][i][2].toLowerCase() + '.png"><span>: x' + scores[1][1][i][0] + '</span></td><td>' + weakness1 + '</td>';
                         }
                         tbody.append('<tr>' + firstTem + secondTem + '</tr>');
                     }

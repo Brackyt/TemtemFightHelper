@@ -4,14 +4,14 @@
         "type": [
             "Digital"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/9/99/Oree.png?version=b87bf4475ec33f6d19738fbb2f27c7cb"
+        "image": "data/temtem/oree.png"
     },
     {
         "name": "Zaobian",
         "type": [
             "Digital"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/5/54/Zaobian.png?version=c052eebff8122fd7b8782094516261e6"
+        "image": "data/temtem/zaobian.png"
     },
     {
         "name": "Platypet",
@@ -19,7 +19,7 @@
             "Water",
             "Toxic"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/0/03/Platypet.png?version=7275416c033374fb0f843fdb0f6a6cef"
+        "image": "data/temtem/platypet.png"
     },
     {
         "name": "Platox",
@@ -27,7 +27,7 @@
             "Water",
             "Toxic"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/7/7b/Platox.png?version=305bcc450342e6f1264c44060ea9f832"
+        "image": "data/temtem/platox.png"
     },
     {
         "name": "Platimous",
@@ -35,14 +35,14 @@
             "Water",
             "Toxic"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/7/7f/Platimous.png?version=7e3e9d3587f448873eb5e2a3875a8f63"
+        "image": "data/temtem/platimous.png"
     },
     {
         "name": "Swali",
         "type": [
             "Nature"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/8/8a/Swali.png/600px-Swali.png?version=486bf0b54a3a2250ae8e570a46bd5d45"
+        "image": "data/temtem/swali.png"
     },
     {
         "name": "Loali",
@@ -50,42 +50,42 @@
             "Nature",
             "Wind"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/0/0c/Loali.png/600px-Loali.png?version=f0adcdc111792c1475decf3fee7b98f2"
+        "image": "data/temtem/loali.png"
     },
     {
         "name": "Tateru",
         "type": [
             "Neutral"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/5/55/Tateru.png/600px-Tateru.png?version=e852ad7990389176e62289cff6597605"
+        "image": "data/temtem/tateru.png"
     },
     {
         "name": "Paharo",
         "type": [
             "Wind"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/1/1c/Paharo.png/600px-Paharo.png?version=a0dd9d2185ed167ce23137a039d55bda"
+        "image": "data/temtem/paharo.png"
     },
     {
         "name": "Paharac",
         "type": [
             "Wind"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/2/2c/Paharac.png/600px-Paharac.png?version=36fb3747dc98507764c9958daa313bda"
+        "image": "data/temtem/paharac.png"
     },
     {
         "name": "Granpah",
         "type": [
             "Wind"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/d/d5/Granpah.png/600px-Granpah.png?version=1e052303eeb0aa31cacb533acce5dd2a"
+        "image": "data/temtem/granpah.png"
     },
     {
         "name": "Ampling",
         "type": [
             "Electric"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/9/93/Ampling.png?version=45ca1c632aa24c533aa963013711a95d"
+        "image": "data/temtem/ampling.png"
     },
     {
         "name": "Amphatyr",
@@ -93,7 +93,7 @@
             "Electric",
             "Nature"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/a/a8/Amphatyr.png?version=d8ebe008a2f25fffea6e63a0b044b2a8"
+        "image": "data/temtem/amphatyr.png"
     },
     {
         "name": "Bunbun",
@@ -101,7 +101,7 @@
             "Earth",
             "Crystal"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/3/38/Bunbun.png?version=1dc1d3659793927baeb1dbcffd35e1dc"
+        "image": "data/temtem/bunbun.png"
     },
     {
         "name": "Mudrid",
@@ -109,28 +109,28 @@
             "Earth",
             "Crystal"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/f/f5/Mudrid.png?version=67c6e521865ee2415afb12caa4c1ad56"
+        "image": "data/temtem/mudrid.png"
     },
     {
         "name": "Hidody",
         "type": [
             "Nature"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/1/1a/Hidody.png/600px-Hidody.png?version=f8f939e368726205a7c9726b35d4f579"
+        "image": "data/temtem/hidody.png"
     },
     {
         "name": "Taifu",
         "type": [
             "Nature"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/3/36/Taifu.png/600px-Taifu.png?version=caab51c4903bc197e67847e890924714"
+        "image": "data/temtem/taifu.png"
     },
     {
         "name": "Fomu",
         "type": [
             "Water"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/7/76/Fomu.png/600px-Fomu.png?version=b00f1b2d7c03aafa218e9c41f1dab3c4"
+        "image": "data/temtem/fomu.png"
     },
     {
         "name": "Wiplump",
@@ -138,14 +138,14 @@
             "Water",
             "Wind"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/f/f7/Wiplump.png/600px-Wiplump.png?version=7ff758d7adfdb43d2930a919312cdf92"
+        "image": "data/temtem/wiplump.png"
     },
     {
         "name": "Skail",
         "type": [
             "Neutral"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/7/77/Skail.png?version=e6972f1832270663d96196128d3a206f"
+        "image": "data/temtem/skail.png"
     },
     {
         "name": "Skunch",
@@ -153,21 +153,21 @@
             "Neutral",
             "Melee"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/4/4b/Skunch.png?version=f2a5ba92574eb545c563f3c87ec3c037"
+        "image": "data/temtem/skunch.png"
     },
     {
         "name": "Houchic",
         "type": [
             "Mental"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/a/af/Houchic.png/600px-Houchic.png?version=5acb28a75c292eda170311ef352584a1"
+        "image": "data/temtem/houchic.png"
     },
     {
         "name": "Tental",
         "type": [
             "Mental"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/3/37/Tental.png/600px-Tental.png?version=d88d53ac55f2ab7788897cd0d0ee5d17"
+        "image": "data/temtem/tental.png"
     },
     {
         "name": "Orphyll",
@@ -175,7 +175,7 @@
             "Nature",
             "Toxic"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/b/b3/Orphyll.png?version=a17eb3228c7b758e6c409769f853d420"
+        "image": "data/temtem/orphyll.png"
     },
     {
         "name": "Nidrasil",
@@ -183,49 +183,49 @@
             "Nature",
             "Toxic"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/5/5b/Nidrasil.png?version=3c94111e1f0c28f0ee1c89bba07f0af0"
+        "image": "data/temtem/nidrasil.png"
     },
     {
         "name": "Banapi",
         "type": [
             "Fire"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/2/27/Banapi.png/600px-Banapi.png?version=1ac6aaec663edcdd51994d5de5b3f53d"
+        "image": "data/temtem/banapi.png"
     },
     {
         "name": "Capyre",
         "type": [
             "Fire"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/c/cf/Capyre.png/600px-Capyre.png?version=4add7a6afaa7bb68f11b1992994f6309"
+        "image": "data/temtem/capyre.png"
     },
     {
         "name": "Lapinite",
         "type": [
             "Crystal"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/6/69/Lapinite.png?version=404d15fbe7dcab715cf7375071550377"
+        "image": "data/temtem/lapinite.png"
     },
     {
         "name": "Azuroc",
         "type": [
             "Crystal"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/9/9a/Azuroc.png?version=8da7d4e185721203d3dab2973984d269"
+        "image": "data/temtem/azuroc.png"
     },
     {
         "name": "Zenoreth",
         "type": [
             "Crystal"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/2/22/Zenoreth.png?version=758011f608a9558ec7ea86d2b64f9bc7"
+        "image": "data/temtem/zenoreth.png"
     },
     {
         "name": "Bigu",
         "type": [
             "Nature"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/0/09/Bigu.png?version=02b9016867119ccf6bb30e3b13e2a61a"
+        "image": "data/temtem/bigu.png"
     },
     {
         "name": "Babawa",
@@ -233,14 +233,14 @@
             "Nature",
             "Water"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/b/b9/Babawa.png?version=6e89036df6a2be3f3a30ba1a64f79a17"
+        "image": "data/temtem/babawa.png"
     },
     {
         "name": "Kaku",
         "type": [
             "Nature"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/4/4e/Kaku.png/600px-Kaku.png?version=e72728240d83cf5817d2386a075d536b"
+        "image": "data/temtem/kaku.png"
     },
     {
         "name": "Saku",
@@ -248,7 +248,7 @@
             "Nature",
             "Wind"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/2/2a/Saku.png/600px-Saku.png?version=671d788a7634d6344320c4ef358d8c7d"
+        "image": "data/temtem/saku.png"
     },
     {
         "name": "Valash",
@@ -256,7 +256,7 @@
             "Neutral",
             "Crystal"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/8/80/Valash.png?version=e1c82f1eda3226303dd5f9ca04342df1"
+        "image": "data/temtem/valash.png"
     },
     {
         "name": "Barnshe",
@@ -264,7 +264,7 @@
             "Mental",
             "Wind"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/6/6c/Barnshe.png/600px-Barnshe.png?version=6eb7aef392cd247826d6cd2f8d78ba62"
+        "image": "data/temtem/barnshe.png"
     },
     {
         "name": "Gyalis",
@@ -272,14 +272,14 @@
             "Crystal",
             "Melee"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/d/d6/Gyalis.png?version=9d6aad147bba766f2c89f590f674c29f"
+        "image": "data/temtem/gyalis.png"
     },
     {
         "name": "Occlura",
         "type": [
             "Crystal"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/3/38/Occlura.png?version=4ec980b58686ecbecef16a8ae234fc88"
+        "image": "data/temtem/occlura.png"
     },
     {
         "name": "Myx",
@@ -287,42 +287,42 @@
             "Crystal",
             "Mental"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/0/07/Myx.png?version=4b69f857086c878c92ee3562537c2e86"
+        "image": "data/temtem/myx.png"
     },
     {
         "name": "Raiber",
         "type": [
             "Fire"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/c/c8/Raiber.png/600px-Raiber.png?version=21409c530841edb6a49f1364d7555ca2"
+        "image": "data/temtem/raiber.png"
     },
     {
         "name": "Raize",
         "type": [
             "Fire"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/f/f4/Raize.png/600px-Raize.png?version=c9afd99346dd9e1d8a4e5a27e368dadb"
+        "image": "data/temtem/raize.png"
     },
     {
         "name": "Raican",
         "type": [
             "Fire"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/9/90/Raican.png?version=f2e9d478403992046f77f26e8221baa0"
+        "image": "data/temtem/raican.png"
     },
     {
         "name": "Pewki",
         "type": [
             "Water"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/8/86/Pewki.png/600px-Pewki.png?version=dbfacca5d4038ebfaf211987e11800f1"
+        "image": "data/temtem/pewki.png"
     },
     {
         "name": "Piraniant",
         "type": [
             "Water"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/0/01/Piraniant.png/600px-Piraniant.png?version=3903e6fc17700f45df8679476066144c"
+        "image": "data/temtem/piraniant.png"
     },
     {
         "name": "Saipat",
@@ -330,49 +330,49 @@
             "Water",
             "Melee"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/e/e3/Saipat.png/600px-Saipat.png?version=43dc6022b37ab22222dd3334e4c3eb2c"
+        "image": "data/temtem/saipat.png"
     },
     {
         "name": "Crystle",
         "type": [
             "Crystal"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/a/ac/Crystle.png/600px-Crystle.png?version=f1f429b91ac025d4e840d83af1ca59cf"
+        "image": "data/temtem/crystle.png"
     },
     {
         "name": "Sherald",
         "type": [
             "Crystal"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/f/ff/Sherald.png/600px-Sherald.png?version=41be16522b994b1ffda2b4a8bba625e4"
+        "image": "data/temtem/sherald.png"
     },
     {
         "name": "Hocus",
         "type": [
             "Mental"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/d/d7/Hocus.png/600px-Hocus.png?version=e2ac33109c4eb4210b18404d3edcd829"
+        "image": "data/temtem/hocus.png"
     },
     {
         "name": "Pocus",
         "type": [
             "Mental"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/f/fb/Pocus.png/600px-Pocus.png?version=3b1a9506a004e4607ea7281959fff991"
+        "image": "data/temtem/pocus.png"
     },
     {
         "name": "Sparzy",
         "type": [
             "Electric"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/8/80/Sparzy.png/600px-Sparzy.png?version=46f33ad8a9f8ed2be5bc9351a1cecb30"
+        "image": "data/temtem/sparzy.png"
     },
     {
         "name": "Mushi",
         "type": [
             "Toxic"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/7/78/Mushi.png?version=9470d7d9f45a815e3b98aed3cd941497"
+        "image": "data/temtem/mushi.png"
     },
     {
         "name": "Mushook",
@@ -380,112 +380,112 @@
             "Toxic",
             "Melee"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/9/90/Mushook.png?version=f50c231b7159bd0ddae135de87023174"
+        "image": "data/temtem/mushook.png"
     },
     {
         "name": "Magmis",
         "type": [
             "Fire"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/5/5d/Magmis.png/600px-Magmis.png?version=d86ef5809cb2e286b591f9573ba1fa1f"
+        "image": "data/temtem/magmis.png"
     },
     {
         "name": "Mastione",
         "type": [
             "Fire"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/3/32/Mastione.png?version=c8074c46c2a55e672a1e42c92f504e2a"
+        "image": "data/temtem/mastione.png"
     },
     {
         "name": "Umishi",
         "type": [
             "Water"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/4/4f/Umishi.png/600px-Umishi.png?version=29aa16ac09e2c18f5963eb992ec0be41"
+        "image": "data/temtem/umishi.png"
     },
     {
         "name": "Ukama",
         "type": [
             "Water"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/7/75/Ukama.png/600px-Ukama.png?version=ea05dc2e66145c883d5dc73256a4335d"
+        "image": "data/temtem/ukama.png"
     },
     {
         "name": "Raignet",
         "type": [
-            "Electric"
+            "Unknown"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/5/50/Raignet.png/600px-Raignet.png?version=b903a42f82e940b6b52852ea616e66be"
+        "image": "data/temtem/raignet.png"
     },
     {
         "name": "Smazee",
         "type": [
             "Melee"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/f/f7/Smazee.png/600px-Smazee.png?version=e669323b12bbcc2e150e157184ce7fc3"
+        "image": "data/temtem/smazee.png"
     },
     {
         "name": "Baboong",
         "type": [
             "Melee"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/2/28/Baboong.png/600px-Baboong.png?version=98441ad2c01bac9d4e7122d6aa70aa7d"
+        "image": "data/temtem/baboong.png"
     },
     {
         "name": "Zizare",
         "type": [
             "Earth"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/f/fe/Zizare.png?version=f4c01f5cf0203afe1ac0bd936ed67a68"
+        "image": "data/temtem/zizare.png"
     },
     {
         "name": "Spriole",
         "type": [
             "Nature"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/8/80/Spriole.png/600px-Spriole.png?version=114b839d6fb6b6d99c702f3979cee14f"
+        "image": "data/temtem/spriole.png"
     },
     {
         "name": "Deendre",
         "type": [
             "Nature"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/4/42/Deendre.png/600px-Deendre.png?version=6d0f47cb60bd1da2f8f7aa2a9c6d8498"
+        "image": "data/temtem/deendre.png"
     },
     {
         "name": "Cerneaf",
         "type": [
             "Nature"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/f/fa/Cerneaf.png/600px-Cerneaf.png?version=69e79cd3b31ad981ff842954f93ec6b9"
+        "image": "data/temtem/cerneaf.png"
     },
     {
         "name": "Toxolotl",
         "type": [
             "Toxic"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/4/4e/Toxolotl.png?version=6c8ebe03b7f4f9a8a374fde76b486b9e"
+        "image": "data/temtem/toxolotl.png"
     },
     {
         "name": "Noxolotl",
         "type": [
             "Toxic"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/5/55/Noxolotl.png?version=cf96862c8acfd03c25e6a795bac4ec13"
+        "image": "data/temtem/noxolotl.png"
     },
     {
         "name": "Blooze",
         "type": [
             "Toxic"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/f/ff/Blooze.png?version=d38834aa0ce7af8041820888b6abcc2b"
+        "image": "data/temtem/blooze.png"
     },
     {
         "name": "Goolder",
         "type": [
             "Toxic"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/2/26/Goolder.png?version=b6789edcf3b988fda045fd0e6b6e3490"
+        "image": "data/temtem/goolder.png"
     },
     {
         "name": "Zephyruff",
@@ -493,7 +493,7 @@
             "Toxic",
             "Wind"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/f/f7/Zephyruff.png?version=3c366e727c8ea0a5d5954d7d75383f7b"
+        "image": "data/temtem/zephyruff.png"
     },
     {
         "name": "Volarend",
@@ -501,7 +501,7 @@
             "Toxic",
             "Wind"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/8/87/Volarend.png?version=542f2e1e332a64bbd138c6495f87b38b"
+        "image": "data/temtem/volarend.png"
     },
     {
         "name": "Ganki",
@@ -509,7 +509,7 @@
             "Electric",
             "Wind"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/b/bc/Ganki.png/600px-Ganki.png?version=eb738232aa8844604cefb5d6a2454f90"
+        "image": "data/temtem/ganki.png"
     },
     {
         "name": "Gazuma",
@@ -517,14 +517,14 @@
             "Electric",
             "Wind"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/5/5c/Gazuma.png/600px-Gazuma.png?version=1e3146ae74239c7a390e63c9e5844b76"
+        "image": "data/temtem/gazuma.png"
     },
     {
         "name": "Oceara",
         "type": [
             "Water"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/2/26/Oceara.png/600px-Oceara.png?version=181de38b8d2d0250862074e8a3be3310"
+        "image": "data/temtem/oceara.png"
     },
     {
         "name": "Shuine",
@@ -532,7 +532,7 @@
             "Crystal",
             "Water"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/d/d9/Shuine.png?version=2bde5d148c7a67127cddfb7dc54208e6"
+        "image": "data/temtem/shuine.png"
     },
     {
         "name": "Nessla",
@@ -540,21 +540,21 @@
             "Water",
             "Electric"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/8/81/Nessla.png/600px-Nessla.png?version=ea30f96938e3a4b945ed2ee5f8e780ac"
+        "image": "data/temtem/nessla.png"
     },
     {
         "name": "Valiar",
         "type": [
             "Mental"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/7/7b/Valiar.png/600px-Valiar.png?version=2f0c542d6de32b2f303d8390a3c13ffc"
+        "image": "data/temtem/valiar.png"
     },
     {
         "name": "Kalazu",
         "type": [
             "Water"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/f/fc/Kalazu.png/600px-Kalazu.png?version=ff4720522086c7b9a75e41011fe4ca66"
+        "image": "data/temtem/kalazu.png"
     },
     {
         "name": "Kalabyss",
@@ -562,7 +562,7 @@
             "Water",
             "Toxic"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/9/90/Kalabyss.png/600px-Kalabyss.png?version=402a3735e38859f07a4dd44abee95ff4"
+        "image": "data/temtem/kalabyss.png"
     },
     {
         "name": "Adoroboros",
@@ -570,14 +570,14 @@
             "Toxic",
             "Mental"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/2/26/Adoroboros.png?version=2ff6fe2a0f5c795e1282da36e24063aa"
+        "image": "data/temtem/adoroboros.png"
     },
     {
         "name": "Tuwai",
         "type": [
             "Wind"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/d/db/Tuwai.png/600px-Tuwai.png?version=df13e26d7fd90763953ec422054dc4af"
+        "image": "data/temtem/tuwai.png"
     },
     {
         "name": "Tuvine",
@@ -585,7 +585,7 @@
             "Wind",
             "Crystal"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/7/7e/Tuvine.png?version=01696a58451cb76565aac50b5ad213d2"
+        "image": "data/temtem/tuvine.png"
     },
     {
         "name": "Kinu",
@@ -593,7 +593,7 @@
             "Nature",
             "Mental"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/4/47/Kinu.png/600px-Kinu.png?version=fd980f5507593710c925c72802e8191e"
+        "image": "data/temtem/kinu.png"
     },
     {
         "name": "Vulvir",
@@ -601,7 +601,7 @@
             "Fire",
             "Earth"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/4/40/Vulvir.png/600px-Vulvir.png?version=ad1eeee979ae6b616141ca3cbac3680c"
+        "image": "data/temtem/vulvir.png"
     },
     {
         "name": "Vulor",
@@ -609,7 +609,7 @@
             "Fire",
             "Earth"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/6/61/Vulor.png?version=dd8cb50fdabe53ce7701b71b278f1b4b"
+        "image": "data/temtem/vulor.png"
     },
     {
         "name": "Vulcrane",
@@ -617,14 +617,14 @@
             "Fire",
             "Earth"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/b/b3/Vulcrane.png?version=3e6fddfb9427757bfe025e335fc5e878"
+        "image": "data/temtem/vulcrane.png"
     },
     {
         "name": "Pigepic",
         "type": [
             "Wind"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/2/20/Pigepic.png/600px-Pigepic.png?version=e42da5d0773b2c7f8db7a20e4d72105f"
+        "image": "data/temtem/pigepic.png"
     },
     {
         "name": "Anahir",
@@ -632,6 +632,6 @@
             "Crystal",
             "Fire"
         ],
-        "image": "https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/e/ea/Anahir.png/600px-Anahir.png?version=1b17c2fef0638c0e3009d0078e4a8b2d"
+        "image": "data/temtem/anahir.png"
     }
 ]

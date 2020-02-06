@@ -142,9 +142,9 @@ $(document).ready(function() {
 
         // if we can't blur background (not supported by browser), put a color
 
-        if ((!$.browser.webkit && !$.browser.chrome) || $.browser.safari || $.browser.mozilla) {
+        /*if ((!$.browser.webkit && !$.browser.chrome) || $.browser.safari || $.browser.mozilla) {
             $("#temtem-modal .list-wrap").css({"background": "#222926"});
-        }
+        }*/
 
         $('#temtem-modal').on('click touch', function(event) {
             if(!$(event.target).hasClass('close-button') && (event.target.id == "dialog" || $(event.target).closest('#dialog').length))
